@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consvest Case Study — Pop Luca</title>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+          Arial, sans-serif;
+        color: #0a0a0a;
+        background: #ffffff;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: geometricPrecision;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      :root {
+        --bg-soft: #f5f5f7;
+        --border: rgba(10, 10, 10, 0.08);
+        --radius-lg: 26px;
+        --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+        --maxw: 980px;
+        --text-soft: #6b6b6f;
+      }
+      .container {
+        width: min(100% - 32px, var(--maxw));
+        margin-inline: auto;
+      }
+
+      /* Top bar */
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.9);
+        border-bottom: 1px solid var(--border);
+      }
+      .topbar-inner {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .btn {
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: #fff;
+        font-weight: 600;
+        font-size: 14px;
+        box-shadow: var(--shadow-soft);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      header {
+        padding: 60px 0 18px;
+        background: radial-gradient(
+            1100px 600px at 80% -10%,
+            #f1f1f3,
+            transparent
+          ),
+          radial-gradient(900px 500px at 0% 0%, #f8f8fa, transparent);
+        border-bottom: 1px solid var(--border);
+      }
+      .eyebrow {
+        font-size: 13px;
+        color: var(--text-soft);
+        background: var(--bg-soft);
+        padding: 6px 10px;
+        border-radius: 999px;
+        display: inline-block;
+        border: 1px solid var(--border);
+      }
+      h1 {
+        font-size: clamp(28px, 4.6vw, 44px);
+        letter-spacing: -0.03em;
+        margin: 12px 0 6px;
+        font-weight: 800;
+        line-height: 1.1;
+      }
+      .sub {
+        color: var(--text-soft);
+        max-width: 70ch;
+        font-size: 16px;
+        margin-bottom: 14px;
+      }
+
+      section {
+        padding: 28px 0;
+      }
+      .card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 20px;
+        box-shadow: var(--shadow-soft);
+        display: grid;
+        gap: 8px;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .list {
+        display: grid;
+        gap: 8px;
+        color: #111;
+      }
+      .muted {
+        color: var(--text-soft);
+        font-size: 14.5px;
+      }
+
+      .shots {
+        display: grid;
+        gap: 12px;
+      }
+      .shot {
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        background: #0b0b0f;
+        box-shadow: var(--shadow-soft);
+        min-height: 220px;
+      }
+      .shot img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      footer {
+        padding: 30px 0 50px;
+        color: var(--text-soft);
+        border-top: 1px solid var(--border);
+        margin-top: 26px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 760px) {
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <div style="font-weight: 800">Pop Luca</div>
+        <div style="display: flex; gap: 8px">
+          <a class="btn" href="index.html">← Back to portfolio</a>
+          <a
+            class="btn"
+            href="https://consvest.ro"
+            target="_blank"
+            rel="noreferrer"
+            >Visit site →</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <div class="container">
+        <div class="eyebrow">Case Study</div>
+        <h1>Consvest — Warehouse Construction in Arad</h1>
+        <p class="sub">
+          A clean, trust-first business website for a construction company
+          focused on warehouses and industrial projects. Built to look premium,
+          load fast, and guide clients toward contacting the company.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="grid-2">
+        <div class="card">
+          <h2 style="margin: 0">Goal</h2>
+          <p class="muted" style="margin: 0">
+            Present Consvest as a high-trust industrial builder with clear
+            services, strong credibility, and an easy path for prospects to
+            request an offer.
+          </p>
+        </div>
+        <div class="card">
+          <h2 style="margin: 0">My role</h2>
+          <div class="list">
+            <div>• UI/UX layout & visual direction</div>
+            <div>• Front-end development (HTML/CSS/JS)</div>
+            <div>• Responsive + performance polish</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid-2">
+        <div class="card">
+          <h2 style="margin: 0">Challenges</h2>
+          <div class="list muted">
+            <div>• Industrial niche needed a premium, “serious” tone.</div>
+            <div>
+              • Clear structure for services + projects without overload.
+            </div>
+            <div>• Mobile readability for on-site decision makers.</div>
+          </div>
+        </div>
+        <div class="card">
+          <h2 style="margin: 0">Solutions</h2>
+          <div class="list muted">
+            <div>• Minimal Apple-style spacing & hierarchy.</div>
+            <div>• Trust blocks (project focus + CTA flow).</div>
+            <div>• Mobile-first layout and fast assets.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 style="margin: 0">Results</h2>
+        <div class="list muted">
+          <div>• Cleaner brand presence and better professionalism.</div>
+          <div>• More structured user journey toward contacting.</div>
+          <div>• Smooth experience on desktop + phone.</div>
+        </div>
+      </section>
+
+      <section class="shots">
+        <h2 style="margin: 0">Screenshots</h2>
+
+        <!-- Replace these images with real shots -->
+        <div class="shot">
+          <img src="consvest-contact.jpeg" alt="Consvest desktop full page" />
+        </div>
+
+        <div class="grid-2">
+          <div class="shot">
+            <img
+              src="consvest-projects.jpeg"
+              alt="Consvest section screenshot"
+            />
+          </div>
+          <div class="shot">
+            <img
+              src="consvest-careers.jpeg"
+              alt="Consvest section screenshot"
+            />
+          </div>
+        </div>
+      </section>
+
+      <footer>© <span id="year"></span> Pop Luca — Case Study</footer>
+    </main>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
